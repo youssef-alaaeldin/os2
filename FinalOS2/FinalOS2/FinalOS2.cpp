@@ -9,17 +9,19 @@ int i, j, nopages, refString[N], frame[N], noOfFrames, k, avail, pageFault = 0, 
 
 void fifo() {
 
-    cout << "Enter String Length" << endl;
+    cout<<"Enter number of frames: ";
+    cin>> noOfFrames;
+
+    cout<<"Enter number of pages: ";
     cin >> nopages;
-    cout << "Enter the string" << endl;
 
-    for (i = 0; i < nopages; i++) {
-        cin >> refString[i];
+    cout << "Enter page reference string: ";
+
+    for (i = 0; i < nopages; ++i) {
+        cin>>refString[i];
     }
-    cout << "Enter no of frames" << endl;
-    cin >> noOfFrames;
 
-    for (i = 0; i < noOfFrames; i++) {
+    for (i = 0; i < noOfFrames; ++i) {
         frame[i] = -1;
     }
 
@@ -50,17 +52,19 @@ void fifo() {
 void LRU() {
  
    
-    cout << " Enter no of pages for which you want to calculate page faults : ";
-    cin >> nopages;  
-    cout << "Enter the Reference String : ";
-    for (i = 0; i < nopages; i++)
-    {
-        
-        cin >> refString[i];
+    cout<<"Enter number of frames: ";
+    cin>> noOfFrames;
+
+    cout<<"Enter number of pages: ";
+    cin >> nopages;
+
+    cout << "Enter page reference string: ";
+
+    for (i = 0; i < nopages; ++i) {
+        cin>>refString[i];
     }
-    cout << " Enter the Number of frames : ";
-    cin >> noOfFrames;
-    for (i = 0; i < noOfFrames; i++) {
+
+    for (i = 0; i < noOfFrames; ++i) {
         frame[i] = -1;
         fcount[i] = 0;
     }
@@ -105,7 +109,7 @@ void LRU() {
 void optimal() {
 
     int  temp[10], flag1, flag2, flag3, pos, max;
-    cout<<"Enter number of frames: ";
+   cout<<"Enter number of frames: ";
     cin>> noOfFrames;
 
     cout<<"Enter number of pages: ";
